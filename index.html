@@ -1,0 +1,28 @@
+<!DOCTYPE html>  
+
+<meta charset="utf-8" />  
+<title>WebSocket Test</title>  
+
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  var socket = io('ws://localhost:8080/');
+  socket.on('connect',function(){
+  	console.log("socketio open!");
+  });
+  socket.on('close',function(){
+  	console.log("socketio close!");
+  });
+</script>
+
+<script language="javascript" type="text/javascript"> 
+	var websocket = new WebSocket("ws://localhost:3900/"); 
+	websocket.connected = false;
+	websocket.onopen = function(evt) { 
+		console.log("websocket open")
+	}; 
+
+	websocket.onclose = function(evt) {
+		console.log("websocket close")
+	}; 
+</script>  
+</html>
