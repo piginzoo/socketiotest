@@ -1,4 +1,4 @@
-socketiotest
+Socket.io Test
 ============
 
 This is just a test code for socketio & its client,
